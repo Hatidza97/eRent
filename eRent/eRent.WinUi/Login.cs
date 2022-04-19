@@ -92,6 +92,13 @@ namespace eRent.WinUi
             }
 
         }
+
+        private void btnRegistracija_Click(object sender, EventArgs e)
+        {
+            Form nova = new frmRegistracija();
+            nova.Show();
+            this.Hide();
+        }
     }
     
 }

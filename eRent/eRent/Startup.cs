@@ -41,6 +41,9 @@ namespace eRent
             services.AddScoped<ICRUDService<Model.Model.Grad, Model.Request.Grad.GradSearchRequest, Model.Request.Grad.GradInsertRequest, Model.Request.Grad.GradInsertRequest>, GradService>();
             services.AddScoped<IKorisniciService, KorisniciService>();
             services.AddScoped<IUlogeService, UlogeService>();
+            services.AddScoped<IObjekatService, ObjekatService>();
+            services.AddScoped<IKategorijaService, KategorijaService>();
+            services.AddScoped<ITipObjektumService, TipObjektumService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

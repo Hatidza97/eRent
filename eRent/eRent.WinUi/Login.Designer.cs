@@ -36,7 +36,8 @@ namespace eRent.WinUi
             this.label3 = new System.Windows.Forms.Label();
             this.cmbUloge = new System.Windows.Forms.ComboBox();
             this.btnPrijava = new System.Windows.Forms.Button();
-            this.txtUloga = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnRegistracija = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,19 +102,32 @@ namespace eRent.WinUi
             this.btnPrijava.UseVisualStyleBackColor = true;
             this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
-            // txtUloga
+            // label4
             // 
-            this.txtUloga.Location = new System.Drawing.Point(33, 232);
-            this.txtUloga.Name = "txtUloga";
-            this.txtUloga.Size = new System.Drawing.Size(100, 22);
-            this.txtUloga.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(126, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nemate račun?Registrirajte se";
+            // 
+            // btnRegistracija
+            // 
+            this.btnRegistracija.Location = new System.Drawing.Point(126, 281);
+            this.btnRegistracija.Name = "btnRegistracija";
+            this.btnRegistracija.Size = new System.Drawing.Size(215, 44);
+            this.btnRegistracija.TabIndex = 8;
+            this.btnRegistracija.Text = "Registracija";
+            this.btnRegistracija.UseVisualStyleBackColor = true;
+            this.btnRegistracija.Click += new System.EventHandler(this.btnRegistracija_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 467);
-            this.Controls.Add(this.txtUloga);
+            this.Controls.Add(this.btnRegistracija);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnPrijava);
             this.Controls.Add(this.cmbUloge);
             this.Controls.Add(this.label3);
@@ -138,6 +152,7 @@ namespace eRent.WinUi
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbUloge;
         private System.Windows.Forms.Button btnPrijava;
-        private System.Windows.Forms.TextBox txtUloga;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRegistracija;
     }
 }

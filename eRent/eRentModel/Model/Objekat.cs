@@ -27,8 +27,8 @@ namespace eRent.Model.Model
         public virtual Kategorija Kategorija { get; set; }
         public virtual TipObjektum TipObjekta { get; set; }
         public virtual Korisnik Vlasnik { get; set; }
-        public virtual ICollection<Cjenovnik> Cjenovniks { get; set; }
-        public virtual ICollection<ObjekatSlike> ObjekatSlikes { get; set; }
-        public virtual ICollection<Rezervacija> Rezervacijas { get; set; }
+        //public virtual ICollection<Cjenovnik> Cjenovniks { get; set; }
+        //public virtual ICollection<ObjekatSlike> ObjekatSlikes { get; set; }
+        //public virtual ICollection<Rezervacija> Rezervacijas { get; set; }
     }
 }
