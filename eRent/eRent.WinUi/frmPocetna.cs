@@ -126,5 +126,12 @@ namespace eRent.WinUi
             forma.MdiParent = this;
             forma.Show(); 
         }
+
+        //private void dodajNoviObjekatToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    frmNoviObjekat forma = new frmNoviObjekat();
+        //    forma.MdiParent = this;
+        //    forma.Show();
+        //}
     }
 }

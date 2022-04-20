@@ -26,6 +26,14 @@ namespace eRent.WinUi
 
         public async Task<T> Get<T>(object search = null)
         {
+            //var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
+            //if (search != null)
+            //{
+            //    url += "?";
+            //    url += await search.ToQueryString();
+            //}
+            //var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            //return result;
             try
             {
                 var query = "";

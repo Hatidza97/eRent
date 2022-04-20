@@ -25,7 +25,7 @@ namespace eRent.Services
         public List<Model.Model.Objekat> Get(ObjekatSearchRequest request)
         {
             //var query = _context.Korisnik.AsQueryable();
-            var query = _context.Objekats
+            var query = _context.Set<Database.Objekat>()
                 .Include(x=>x.Kategorija)
                 .Include(x=>x.TipObjekta)
                 .Include(x=>x.Vlasnik)
@@ -36,20 +36,18 @@ namespace eRent.Services
                 query = query.Where(x => x.Naziv == request.Naziv);
 
             }
-            //if (!string.IsNullOrEmpty(request.NazivKategorije))
-            //{
-            //    query = query.Where(x => x.Kategorija.NazivKategorije == request.NazivKategorije);
-
-            //}
-            //if (!string.IsNullOrEmpty(request.TipObjekta))
-            //{
-            //    query = query.Where(x => x.TipObjekta.Tip == request.TipObjekta);
-            //}
-            //if (!string.IsNullOrEmpty(request.Vlasnik))
-            //{
-            //    query = query.Where(x => x.Vlasnik.Ime+" "+x.Vlasnik.Prezime == request.Vlasnik);
-            //}
-
+            if (request.ObjekatId != 0)
+            {
+                query = query.Where(x => x.ObjekatId == request.ObjekatId);
+            }
+            if (request.KategorijaId!=0)
+            {
+                query = query.Where(x => x.KategorijaId == request.KategorijaId);
+            }
+            if (request.TipObjektaId != 0)
+            {
+                query = query.Where(x => x.TipObjektaId == request.TipObjektaId);
+            }
             if (!string.IsNullOrEmpty(request.Adresa))
             {
                 query = query.Where(x => x.Adresa.StartsWith(request.Adresa));
@@ -60,10 +58,7 @@ namespace eRent.Services
                 query = query.Where(x => x.Email.StartsWith(request.Email));
 
             }
-            if (request.TipObjektaId != 0)
-            {
-                query = query.Where(x => x.TipObjektaId == request.TipObjektaId);
-            }
+           
             var list = query.ToList();
             return _mapper.Map<List<Model.Model.Objekat>>(list);
         }
@@ -74,6 +69,21 @@ namespace eRent.Services
             var entitet = _context.Objekats.Find(id);
             return _mapper.Map<Model.Model.Objekat>(entitet);
         }
+        //public List<Model.Model.Objekat> GetNaziv(ObjekatNazivRequest request) 
+        //{
+        //    var query = _context.Objekats
+        //      .Include(x => x.Kategorija)
+        //      .Include(x => x.TipObjekta)
+        //      .Include(x => x.Vlasnik)
+        //      .AsQueryable();
+        //    if (!string.IsNullOrEmpty(request.Naziv))
+        //    {
+        //        query = query.Where(x => x.Naziv == request.Naziv);
+        //    }
+        //    var list = query.ToList();
+        //    return _mapper.Map<List<Model.Model.Objekat>>(list);
+        //}
+
 
         [HttpPost]
         public Model.Model.Objekat Insert(ObjekatInserRequest request)

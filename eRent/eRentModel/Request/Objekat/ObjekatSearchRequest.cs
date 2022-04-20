@@ -12,7 +12,7 @@ namespace eRent.Model.Request.Objekat
         public int GradId { get; set; }
         public string Adresa { get; set; }
         public int KategorijaId { get; set; }
-        public bool Aktivan { get; set; }
+        public bool? Aktivan { get; set; }
         public string BrTelefona { get; set; }
         public string Email { get; set; }
         public int TipObjektaId { get; set; }

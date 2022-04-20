@@ -34,6 +34,8 @@ namespace eRent.WinUi.Forms.Objekat
                 {
                     Adresa = item.Adresa,
                     Naziv = item.Naziv,
+                    BrTelefona = item.BrTelefona,
+                    Email = item.Email,
                     KategorijaId = item.KategorijaId,
                     ObjekatId = item.ObjekatId,
                     TipObjektaId = item.TipObjektaId,
@@ -48,5 +50,6 @@ namespace eRent.WinUi.Forms.Objekat
             dgvObjekti.AutoGenerateColumns = false;
             dgvObjekti.DataSource = lista;
         }
+
     }
 }

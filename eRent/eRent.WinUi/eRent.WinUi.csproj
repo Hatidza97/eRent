@@ -96,11 +96,23 @@
     <Compile Include="Forms\Korisnici\frmKorisnici.Designer.cs">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Objekat\frmNoviObjekat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Objekat\frmNoviObjekat.Designer.cs">
+      <DependentUpon>frmNoviObjekat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Objekat\frmObjekti.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Objekat\frmObjekti.Designer.cs">
       <DependentUpon>frmObjekti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Objekat\ObjektiPretraga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Objekat\ObjektiPretraga.Designer.cs">
+      <DependentUpon>ObjektiPretraga.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPocetna.cs">
       <SubType>Form</SubType>
@@ -134,8 +146,14 @@
     <EmbeddedResource Include="Forms\Korisnici\frmKorisnici.resx">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Objekat\frmNoviObjekat.resx">
+      <DependentUpon>frmNoviObjekat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Objekat\frmObjekti.resx">
       <DependentUpon>frmObjekti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Objekat\ObjektiPretraga.resx">
+      <DependentUpon>ObjektiPretraga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetna.resx">
       <DependentUpon>frmPocetna.cs</DependentUpon>

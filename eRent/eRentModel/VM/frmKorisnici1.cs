@@ -6,6 +6,7 @@ namespace eRent.Model.VM
 {
     public class frmKorisnici1
     {
+        public int KorisnikId { get; set; }
         public string Username { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }

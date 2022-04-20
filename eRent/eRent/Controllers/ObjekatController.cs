@@ -22,6 +22,7 @@ namespace eRent.Controllers
         {
             return _service.Get(request);
         }
+       
         [HttpGet("{id}")]
         public ActionResult<Model.Model.Objekat> GetById(int id)
         {

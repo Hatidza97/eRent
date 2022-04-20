@@ -30,15 +30,13 @@ namespace eRent.WinUi.Forms.Objekat
         private void InitializeComponent()
         {
             this.dgvObjekti = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPretraga = new System.Windows.Forms.TextBox();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrTelefona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategorija = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vlasnik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjekti)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,40 +52,14 @@ namespace eRent.WinUi.Forms.Objekat
             this.Kategorija,
             this.Adresa,
             this.Vlasnik});
-            this.dgvObjekti.Location = new System.Drawing.Point(12, 184);
+            this.dgvObjekti.Location = new System.Drawing.Point(12, 81);
             this.dgvObjekti.Name = "dgvObjekti";
             this.dgvObjekti.ReadOnly = true;
             this.dgvObjekti.RowHeadersWidth = 51;
             this.dgvObjekti.RowTemplate.Height = 24;
             this.dgvObjekti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvObjekti.Size = new System.Drawing.Size(775, 254);
+            this.dgvObjekti.Size = new System.Drawing.Size(775, 357);
             this.dgvObjekti.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(301, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Lista objekata";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Pretraga po nazivu:";
-            // 
-            // txtPretraga
-            // 
-            this.txtPretraga.Location = new System.Drawing.Point(164, 119);
-            this.txtPretraga.Name = "txtPretraga";
-            this.txtPretraga.Size = new System.Drawing.Size(624, 22);
-            this.txtPretraga.TabIndex = 3;
             // 
             // Naziv
             // 
@@ -118,7 +90,7 @@ namespace eRent.WinUi.Forms.Objekat
             // 
             // Kategorija
             // 
-            this.Kategorija.DataPropertyName = "Kategorija.Naziv";
+            this.Kategorija.DataPropertyName = "Kategorija";
             this.Kategorija.HeaderText = "Kategorija";
             this.Kategorija.MinimumWidth = 6;
             this.Kategorija.Name = "Kategorija";
@@ -143,13 +115,21 @@ namespace eRent.WinUi.Forms.Objekat
             this.Vlasnik.ReadOnly = true;
             this.Vlasnik.Width = 125;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(301, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Lista objekata";
+            // 
             // frmObjekti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtPretraga);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvObjekti);
             this.Name = "frmObjekti";
@@ -165,8 +145,6 @@ namespace eRent.WinUi.Forms.Objekat
 
         private System.Windows.Forms.DataGridView dgvObjekti;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPretraga;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrTelefona;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

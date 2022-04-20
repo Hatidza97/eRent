@@ -1,5 +1,6 @@
 ﻿using eRent.Model.Request.Korisnik;
 using eRent.Model.VM;
+using eRent.WinUi.Forms.Objekat;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,7 @@ namespace eRent.WinUi.Forms.Korisnici
             {
                 frmKorisnici1 forma = new frmKorisnici1
                 {
+                    KorisnikId=item.KorisnikId,
                     Ime = item.Ime,
                     Prezime = item.Prezime,
                     Adresa = item.Adresa,
@@ -58,12 +60,14 @@ namespace eRent.WinUi.Forms.Korisnici
                 {
                     var forma = new frmKorisnici1
                     {
+                        KorisnikId=item.KorisnikId,
                         Ime = item.Ime,
                         Prezime = item.Prezime,
                         Email = item.Email,
                         Telefon = item.Telefon,
                         Adresa = item.Adresa,
                         Username=item.Username
+                        
                     };
                     lista.Add(forma);
                 }
@@ -74,6 +78,14 @@ namespace eRent.WinUi.Forms.Korisnici
                     MessageBox.Show("Nema rezultata pretrage", "Poruka", MessageBoxButtons.OK);
                 }
             
+        }
+
+        private void dgvKorisnici_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var Vlasnik = dgvKorisnici.SelectedRows[0].Cells[0].Value;
+            var rez = Vlasnik.ToString();
+            frmNoviObjekat forma = new frmNoviObjekat(int.Parse(rez));
+            forma.Show();
         }
     }
 }

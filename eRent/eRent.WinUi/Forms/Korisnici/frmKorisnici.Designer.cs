@@ -31,14 +31,15 @@ namespace eRent.WinUi.Forms.Korisnici
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtImePrezime = new System.Windows.Forms.TextBox();
+            this.KorisnikId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KorisnickoIme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtImePrezime = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@ namespace eRent.WinUi.Forms.Korisnici
             this.dgvKorisnici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKorisnici.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.KorisnikId,
             this.Ime,
             this.Prezime,
             this.KorisnickoIme,
@@ -73,6 +75,33 @@ namespace eRent.WinUi.Forms.Korisnici
             this.dgvKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKorisnici.Size = new System.Drawing.Size(695, 328);
             this.dgvKorisnici.TabIndex = 1;
+            this.dgvKorisnici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKorisnici_CellContentClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Pretraga po imenu ili prezimenu:";
+            // 
+            // txtImePrezime
+            // 
+            this.txtImePrezime.Location = new System.Drawing.Point(232, 57);
+            this.txtImePrezime.Name = "txtImePrezime";
+            this.txtImePrezime.Size = new System.Drawing.Size(476, 22);
+            this.txtImePrezime.TabIndex = 3;
+            this.txtImePrezime.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // KorisnikId
+            // 
+            this.KorisnikId.DataPropertyName = "KorisnikId";
+            this.KorisnikId.HeaderText = "KorisnikId";
+            this.KorisnikId.MinimumWidth = 6;
+            this.KorisnikId.Name = "KorisnikId";
+            this.KorisnikId.ReadOnly = true;
+            this.KorisnikId.Visible = false;
             // 
             // Ime
             // 
@@ -122,23 +151,6 @@ namespace eRent.WinUi.Forms.Korisnici
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Pretraga po imenu ili prezimenu:";
-            // 
-            // txtImePrezime
-            // 
-            this.txtImePrezime.Location = new System.Drawing.Point(232, 57);
-            this.txtImePrezime.Name = "txtImePrezime";
-            this.txtImePrezime.Size = new System.Drawing.Size(476, 22);
-            this.txtImePrezime.TabIndex = 3;
-            this.txtImePrezime.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // frmKorisnici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,13 +173,14 @@ namespace eRent.WinUi.Forms.Korisnici
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvKorisnici;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtImePrezime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KorisnikId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnickoIme;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtImePrezime;
     }
 }
