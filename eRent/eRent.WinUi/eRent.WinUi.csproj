@@ -114,6 +114,18 @@
     <Compile Include="Forms\Objekat\ObjektiPretraga.Designer.cs">
       <DependentUpon>ObjektiPretraga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Rezervacija\frmDodajRezervaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rezervacija\frmDodajRezervaciju.Designer.cs">
+      <DependentUpon>frmDodajRezervaciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rezervacija\frmRezervacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rezervacija\frmRezervacija.Designer.cs">
+      <DependentUpon>frmRezervacija.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPocetna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Objekat\ObjektiPretraga.resx">
       <DependentUpon>ObjektiPretraga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rezervacija\frmDodajRezervaciju.resx">
+      <DependentUpon>frmDodajRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rezervacija\frmRezervacija.resx">
+      <DependentUpon>frmRezervacija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetna.resx">
       <DependentUpon>frmPocetna.cs</DependentUpon>

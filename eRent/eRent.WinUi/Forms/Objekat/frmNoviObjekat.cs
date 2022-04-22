@@ -53,7 +53,7 @@ namespace eRent.WinUi.Forms.Objekat
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            request.VlasnikId = 1;
+            request.VlasnikId =(int)_v;
             request.Adresa = txtAdresa.Text;
             request.Email = txtEmail.Text;
             request.BrTelefona = txtBrTel.Text;

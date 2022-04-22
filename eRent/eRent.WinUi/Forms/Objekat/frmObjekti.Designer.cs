@@ -37,6 +37,8 @@ namespace eRent.WinUi.Forms.Objekat
             this.Adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vlasnik = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPretraga = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjekti)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +46,7 @@ namespace eRent.WinUi.Forms.Objekat
             // 
             this.dgvObjekti.AllowUserToAddRows = false;
             this.dgvObjekti.AllowUserToDeleteRows = false;
+            this.dgvObjekti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvObjekti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvObjekti.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Naziv,
@@ -52,13 +55,13 @@ namespace eRent.WinUi.Forms.Objekat
             this.Kategorija,
             this.Adresa,
             this.Vlasnik});
-            this.dgvObjekti.Location = new System.Drawing.Point(12, 81);
+            this.dgvObjekti.Location = new System.Drawing.Point(12, 146);
             this.dgvObjekti.Name = "dgvObjekti";
             this.dgvObjekti.ReadOnly = true;
             this.dgvObjekti.RowHeadersWidth = 51;
             this.dgvObjekti.RowTemplate.Height = 24;
             this.dgvObjekti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvObjekti.Size = new System.Drawing.Size(775, 357);
+            this.dgvObjekti.Size = new System.Drawing.Size(775, 292);
             this.dgvObjekti.TabIndex = 0;
             // 
             // Naziv
@@ -68,7 +71,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.Naziv.MinimumWidth = 6;
             this.Naziv.Name = "Naziv";
             this.Naziv.ReadOnly = true;
-            this.Naziv.Width = 125;
             // 
             // BrTelefona
             // 
@@ -77,7 +79,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.BrTelefona.MinimumWidth = 6;
             this.BrTelefona.Name = "BrTelefona";
             this.BrTelefona.ReadOnly = true;
-            this.BrTelefona.Width = 125;
             // 
             // Email
             // 
@@ -86,7 +87,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
-            this.Email.Width = 125;
             // 
             // Kategorija
             // 
@@ -95,7 +95,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.Kategorija.MinimumWidth = 6;
             this.Kategorija.Name = "Kategorija";
             this.Kategorija.ReadOnly = true;
-            this.Kategorija.Width = 125;
             // 
             // Adresa
             // 
@@ -104,7 +103,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.Adresa.MinimumWidth = 6;
             this.Adresa.Name = "Adresa";
             this.Adresa.ReadOnly = true;
-            this.Adresa.Width = 125;
             // 
             // Vlasnik
             // 
@@ -113,7 +111,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.Vlasnik.MinimumWidth = 6;
             this.Vlasnik.Name = "Vlasnik";
             this.Vlasnik.ReadOnly = true;
-            this.Vlasnik.Width = 125;
             // 
             // label1
             // 
@@ -125,11 +122,30 @@ namespace eRent.WinUi.Forms.Objekat
             this.label1.TabIndex = 1;
             this.label1.Text = "Lista objekata";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Pretraga po nazivu objekta:";
+            // 
+            // txtPretraga
+            // 
+            this.txtPretraga.Location = new System.Drawing.Point(201, 79);
+            this.txtPretraga.Name = "txtPretraga";
+            this.txtPretraga.Size = new System.Drawing.Size(587, 22);
+            this.txtPretraga.TabIndex = 3;
+            this.txtPretraga.TextChanged += new System.EventHandler(this.txtPretraga_TextChanged);
+            // 
             // frmObjekti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtPretraga);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvObjekti);
             this.Name = "frmObjekti";
@@ -151,5 +167,7 @@ namespace eRent.WinUi.Forms.Objekat
         private System.Windows.Forms.DataGridViewTextBoxColumn Kategorija;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vlasnik;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPretraga;
     }
 }

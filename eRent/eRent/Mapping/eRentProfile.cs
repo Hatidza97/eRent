@@ -34,6 +34,8 @@ namespace eRent.Mapping
             CreateMap<Database.Objekat, Model.Request.Objekat.ObjekatInserRequest>().ReverseMap();
             CreateMap<Database.ObjekatSlike, Model.Model.ObjekatSlike>().ReverseMap();
             CreateMap<Database.Rezervacija, Model.Model.Rezervacija>().ReverseMap();
+            CreateMap<Database.Rezervacija, Model.Request.Rezervacija.RezervacijaSearchRequest>().ReverseMap();
+            CreateMap<Database.Rezervacija, Model.Request.Rezervacija.RezervacijaInsertRequest>().ReverseMap();
             CreateMap<Database.TipObjektum, Model.Model.TipObjektum>().ReverseMap();
             CreateMap<Database.TipObjektum, Model.Request.TipObjektum.TipObjektumSearchRequest>();
             CreateMap<Database.TipObjektum, Model.Request.TipObjektum.TipObjektumInsertRequest>();

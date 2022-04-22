@@ -33,7 +33,7 @@ namespace eRent.Services
 
             if (!string.IsNullOrEmpty(request.Naziv))
             {
-                query = query.Where(x => x.Naziv == request.Naziv);
+                query = query.Where(x => x.Naziv.Contains(request.Naziv));
 
             }
             if (request.ObjekatId != 0)

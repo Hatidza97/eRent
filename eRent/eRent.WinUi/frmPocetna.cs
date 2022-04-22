@@ -1,5 +1,6 @@
 ﻿using eRent.WinUi.Forms.Korisnici;
 using eRent.WinUi.Forms.Objekat;
+using eRent.WinUi.Forms.Rezervacija;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -125,6 +126,20 @@ namespace eRent.WinUi
             frmObjekti forma = new frmObjekti();
             forma.MdiParent = this;
             forma.Show(); 
+        }
+
+        private void pregledRezervacijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRezervacija forma = new frmRezervacija();
+            forma.MdiParent = this;
+            forma.Show();
+        }
+
+        private void kreirajRezervacijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDodajRezervaciju forma = new frmDodajRezervaciju();
+            forma.MdiParent = this;
+            forma.Show();
         }
 
         //private void dodajNoviObjekatToolStripMenuItem_Click(object sender, EventArgs e)

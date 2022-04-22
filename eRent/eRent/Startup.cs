@@ -48,6 +48,7 @@ namespace eRent
             services.AddScoped<IObjekatService, ObjekatService>();
             services.AddScoped<IKategorijaService, KategorijaService>();
             services.AddScoped<ITipObjektumService, TipObjektumService>();
+            services.AddScoped<IRezervacijaService, RezervacijaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
