@@ -21,31 +21,37 @@ namespace eRent.Services
             _mapper = mapper;
         }
 
-        //public List<Models.Korisnik> Get()
-        //{
-
-        //    var list = _context.Korisnik.ToList();
-
-        //    return _mapper.Map<List<Models.Korisnik>>(list);
-        //}
-
         [HttpGet]
         public List<Model.Model.Rezervacija> Get(RezervacijaSearchRequest request=null)
         {
             //var query = _context.Korisnik.AsQueryable();
             var query = _context.Rezervacijas
+                .Include(x=>x.Cjenovnik)
                 .Include(x=>x.Objekat)
                 .Include(x=>x.Korisnik)
                 .AsQueryable();
-
-
+            
+          
             if (request.DatumPrijave != null && request.DatumOdjave != null)
             {
                 var datumOd = request.DatumPrijave?.Date;
                 var datumDo = request.DatumOdjave?.Date;
                 query = query.Where(x => x.DatumPrijave.Date >= datumOd && x.DatumOdjave.Date <= datumDo);
             }
-
+            //if (request.ObjekatSearchRequest.Rezervisano == false)
+            //{
+            //    var datumOd = request.DatumPrijave?.Date;
+            //    var datumDo = request.DatumOdjave?.Date;
+            //    query = query.Where(x => x.Objekat.Naziv==request.ObjekatSearchRequest.Naziv);
+            //}
+            if (request.CjenovnikId.HasValue)
+            {
+                query = query.Where(x => x.CjenovnikId == request.CjenovnikId);
+            }
+            if (request.ObjekatSearchRequest.GradId.HasValue)
+            {
+                query = query.Where(x => x.Objekat.GradId == request.ObjekatSearchRequest.GradId);
+            }
             var list = query.ToList();
             return _mapper.Map<List<Model.Model.Rezervacija>>(list);
         }

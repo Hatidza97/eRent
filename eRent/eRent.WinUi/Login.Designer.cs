@@ -125,6 +125,8 @@ namespace eRent.WinUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::eRent.WinUi.Properties.Resources.bkng;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(494, 467);
             this.Controls.Add(this.btnRegistracija);
             this.Controls.Add(this.label4);

@@ -24,7 +24,7 @@ namespace eRent.Database
         public string BrTelefona { get; set; }
         public string Email { get; set; }
         public int TipObjektaId { get; set; }
-
+        public bool Rezervisano { get; set; }
         public virtual Kategorija Kategorija { get; set; }
         public virtual TipObjektum TipObjekta { get; set; }
         public virtual Korisnik Vlasnik { get; set; }

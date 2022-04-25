@@ -18,13 +18,13 @@ namespace eRent.Database
         public DateTime DatumRezervacije { get; set; }
         public DateTime DatumPrijave { get; set; }
         public DateTime DatumOdjave { get; set; }
-        public int CjenovikId { get; set; }
+        public int CjenovnikId { get; set; }
         public double Cijena { get; set; }
         public double Vrijednost { get; set; }
         public int KorisnikId { get; set; }
         public int? BrojMjestaDjeca { get; set; }
         public int? BrojMjestaOdrasli { get; set; }
-
+        public virtual Cjenovnik Cjenovnik { get; set; }
         public virtual Korisnik Gost { get; set; }
         public virtual Korisnik Korisnik { get; set; }
         public virtual Objekat Objekat { get; set; }

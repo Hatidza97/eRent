@@ -19,6 +19,6 @@ namespace eRent.Model.VM
         public int KorisnikId { get; set; }
         public int? BrojMjestaDjeca { get; set; }
         public int? BrojMjestaOdrasli { get; set; }
-
+        public string Cjenovnik { get; set; }
     }
 }

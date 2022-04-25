@@ -36,15 +36,15 @@ namespace eRent.Services
                 query = query.Where(x => x.Naziv.Contains(request.Naziv));
 
             }
-            if (request.ObjekatId != 0)
+            if (request.ObjekatId.HasValue)
             {
                 query = query.Where(x => x.ObjekatId == request.ObjekatId);
             }
-            if (request.KategorijaId!=0)
+            if (request.KategorijaId.HasValue)
             {
                 query = query.Where(x => x.KategorijaId == request.KategorijaId);
             }
-            if (request.TipObjektaId != 0)
+            if (request.TipObjektaId.HasValue)
             {
                 query = query.Where(x => x.TipObjektaId == request.TipObjektaId);
             }
@@ -58,7 +58,14 @@ namespace eRent.Services
                 query = query.Where(x => x.Email.StartsWith(request.Email));
 
             }
-           
+            //if ((request.Rezervisano==false))
+            //{
+            //    query = query.Where(x => x.Rezervisano==false);
+            //}
+            //if (request.GradId.HasValue)
+            //{
+            //    query = query.Where(x => x.GradId == request.GradId);
+            //}
             var list = query.ToList();
             return _mapper.Map<List<Model.Model.Objekat>>(list);
         }

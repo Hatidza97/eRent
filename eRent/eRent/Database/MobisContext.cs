@@ -35,7 +35,7 @@ namespace eRent.Database
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=localhost; Initial Catalog=Mobis;user=admin;Password=admin123!");
+                optionsBuilder.UseSqlServer("Data Source=localhost; Initial Catalog=Mobis1;user=admin;Password=admin123!");
             }
         }
 
@@ -250,7 +250,7 @@ namespace eRent.Database
 
                 entity.Property(e => e.RezervacijaId).HasColumnName("RezervacijaID");
 
-                entity.Property(e => e.CjenovikId).HasColumnName("CjenovikID");
+                entity.Property(e => e.CjenovnikId).HasColumnName("CjenovikID");
 
                 entity.Property(e => e.DatumOdjave).HasColumnType("date");
 

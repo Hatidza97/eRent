@@ -23,6 +23,7 @@ namespace eRent.Mapping
             CreateMap<Database.Autorizacija, Model.Model.Autorizacija>().ReverseMap();
             CreateMap<Database.Boravak, Model.Model.Boravak>().ReverseMap();
             CreateMap<Database.Cjenovnik, Model.Model.Cjenovnik>().ReverseMap();
+            CreateMap<Database.Cjenovnik, Model.Request.Cjenovnik.CjenovnikSearchRequest>().ReverseMap();
             CreateMap<Database.Kategorija, Model.Model.Kategorija>().ReverseMap();
             CreateMap<Database.Kategorija, Model.Request.Kategorija.KategorijaSearchRequest>();
             CreateMap<Database.Kategorija, Model.Request.Kategorija.KategorijaInsertRequest>();

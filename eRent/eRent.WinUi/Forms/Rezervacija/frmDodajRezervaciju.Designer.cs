@@ -42,6 +42,7 @@ namespace eRent.WinUi.Forms.Rezervacija
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvObjekti = new System.Windows.Forms.DataGridView();
             this.Objekat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ObjekatId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjekti)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,7 +144,8 @@ namespace eRent.WinUi.Forms.Rezervacija
             this.dgvObjekti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvObjekti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvObjekti.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Objekat});
+            this.Objekat,
+            this.ObjekatId});
             this.dgvObjekti.Location = new System.Drawing.Point(16, 240);
             this.dgvObjekti.Name = "dgvObjekti";
             this.dgvObjekti.ReadOnly = true;
@@ -152,14 +154,24 @@ namespace eRent.WinUi.Forms.Rezervacija
             this.dgvObjekti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvObjekti.Size = new System.Drawing.Size(772, 150);
             this.dgvObjekti.TabIndex = 13;
+            this.dgvObjekti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObjekti_CellContentClick);
             // 
             // Objekat
             // 
-            this.Objekat.DataPropertyName = "Objekat";
+            this.Objekat.DataPropertyName = "Naziv";
             this.Objekat.HeaderText = "Objekat";
             this.Objekat.MinimumWidth = 6;
             this.Objekat.Name = "Objekat";
             this.Objekat.ReadOnly = true;
+            // 
+            // ObjekatId
+            // 
+            this.ObjekatId.DataPropertyName = "ObjekatId";
+            this.ObjekatId.HeaderText = "ObjekatId";
+            this.ObjekatId.MinimumWidth = 6;
+            this.ObjekatId.Name = "ObjekatId";
+            this.ObjekatId.ReadOnly = true;
+            this.ObjekatId.Visible = false;
             // 
             // frmDodajRezervaciju
             // 
@@ -201,5 +213,6 @@ namespace eRent.WinUi.Forms.Rezervacija
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvObjekti;
         private System.Windows.Forms.DataGridViewTextBoxColumn Objekat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ObjekatId;
     }
 }

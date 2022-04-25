@@ -32,7 +32,11 @@ namespace eRent
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          
+           
+            //var connection = @"Server=(localhost);Database=Mobis;Trusted_Connection=true;ConnectRetryCount=0";
+            ////services.AddDbContext<MobisContext>(c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+            ////  .EnableSensitiveDataLogging());
+            //services.AddDbContext<MobisContext>(options => options.UseSqlServer(connection));
             services.AddControllers().AddNewtonsoftJson(options => 
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             
@@ -49,6 +53,7 @@ namespace eRent
             services.AddScoped<IKategorijaService, KategorijaService>();
             services.AddScoped<ITipObjektumService, TipObjektumService>();
             services.AddScoped<IRezervacijaService, RezervacijaService>();
+            services.AddScoped<ICjenovnikService, CjenovnikService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

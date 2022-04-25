@@ -23,7 +23,7 @@ namespace eRent.Model.Model
         public int KorisnikId { get; set; }
         public int? BrojMjestaDjeca { get; set; }
         public int? BrojMjestaOdrasli { get; set; }
-
+        public virtual Cjenovnik Cjenovnik { get; set; }
         public virtual Korisnik Gost { get; set; }
         public virtual Korisnik Korisnik { get; set; }
         public virtual Objekat Objekat { get; set; }

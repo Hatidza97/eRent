@@ -15,5 +15,6 @@ namespace eRent.Model.Request.Objekat
         public string BrTelefona { get; set; }
         public string Email { get; set; }
         public int TipObjektaId { get; set; }
+        public bool Rezervisano { get; set; }
     }
 }

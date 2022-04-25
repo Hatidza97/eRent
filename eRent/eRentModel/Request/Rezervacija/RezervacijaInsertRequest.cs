@@ -11,7 +11,7 @@ namespace eRent.Model.Request.Rezervacija
         public DateTime DatumRezervacije { get; set; }
         public DateTime DatumPrijave { get; set; }
         public DateTime DatumOdjave { get; set; }
-        public int CjenovikId { get; set; }
+        public int? CjenovikId { get; set; }
         public double Cijena { get; set; }
         public double Vrijednost { get; set; }
         public int KorisnikId { get; set; }

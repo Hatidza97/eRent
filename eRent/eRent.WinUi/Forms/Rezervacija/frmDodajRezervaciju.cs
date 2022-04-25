@@ -1,4 +1,5 @@
-﻿using eRent.Model.Request.Rezervacija;
+﻿using eRent.Model.Request.Objekat;
+using eRent.Model.Request.Rezervacija;
 using eRent.Model.VM;
 using System;
 using System.Collections.Generic;
@@ -52,20 +53,27 @@ namespace eRent.WinUi.Forms.Rezervacija
             var DatumDo = dateTimePicker2.Value;
             var djeca = txtDjeca.Text;
             var odrasli = txtOdrasli.Text;
-
+            ObjekatSearchRequest uslov = new ObjekatSearchRequest
+            {
+                Rezervisano = false,
+                GradId=cmbGradovi.SelectedIndex
+            };
             var request = new RezervacijaSearchRequest
             {
                 BrojMjestaDjeca = Convert.ToInt32(txtDjeca.Text),
                 BrojMjestaOdrasli = Convert.ToInt32(txtOdrasli.Text),
-                DatumPrijave = DatumOd,
-                DatumOdjave = DatumDo
+                //DatumPrijave = DatumOd,
+                //DatumOdjave = DatumDo,
+                ObjekatSearchRequest=uslov
             };
-            if (request.DatumOdjave.Value.Date <= request.DatumPrijave.Value.Date)
-            {
-                MessageBox.Show("Datum početka mora biti manji od datuma završetka", "Greška", MessageBoxButtons.OK);
-            }
+            //if (request.DatumOdjave.Value.Date <= request.DatumPrijave.Value.Date)
+            //{
+            //    MessageBox.Show("Datum početka mora biti manji od datuma završetka", "Greška", MessageBoxButtons.OK);
+            //}
             var podaci = await aPIService_Rezervacija.Get<List<Model.Model.Rezervacija>>(request);
+            var podaciObjekat = await aPIService.Get<List<Model.Model.Objekat>>(uslov);
             List<frmRezervacija1> lista = new List<frmRezervacija1>();
+            List<frmObjekti1> lista1 = new List<frmObjekti1>();
             foreach (var x in podaci)
             {
                 frmRezervacija1 forma = new frmRezervacija1
@@ -85,13 +93,32 @@ namespace eRent.WinUi.Forms.Rezervacija
                 };
                 lista.Add(forma);
             }
+            foreach (var x in podaciObjekat)
+            {
+                frmObjekti1 forma1 = new frmObjekti1
+                {
+                  Naziv=x.Naziv
+                };
+                lista1.Add(forma1);
+            }
+
             dgvObjekti.AutoGenerateColumns = false;
-            dgvObjekti.DataSource = lista;
-            if (lista.Count == 0)
+            dgvObjekti.DataSource = podaciObjekat;
+            if (lista1.Count == 0)
             {
                 MessageBox.Show("Nema rezultata pretrage", "Poruka", MessageBoxButtons.OK);
 
             }
+        }
+
+        private void dgvObjekti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var objekat = dgvObjekti.SelectedRows[0].Cells[0].Value;
+            var objekat_id = dgvObjekti.SelectedRows[0].Cells[1].Value;
+            frmNovaRezervacija forma = new frmNovaRezervacija(objekat, txtDjeca.Text,txtOdrasli.Text,objekat_id);
+            forma.Show();
+
+
         }
     }
 }
