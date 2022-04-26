@@ -205,6 +205,12 @@
     <Compile Include="Forms\Korisnici\frmKorisnici.Designer.cs">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Objekat\frmDetaljiObjekta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Objekat\frmDetaljiObjekta.Designer.cs">
+      <DependentUpon>frmDetaljiObjekta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Objekat\frmNoviObjekat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,12 @@
     </Compile>
     <Compile Include="Forms\Objekat\frmObjekti.Designer.cs">
       <DependentUpon>frmObjekti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Objekat\frmSlikeObjekta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Objekat\frmSlikeObjekta.Designer.cs">
+      <DependentUpon>frmSlikeObjekta.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Objekat\ObjektiPretraga.cs">
       <SubType>Form</SubType>
@@ -253,6 +265,7 @@
     <Compile Include="frmRegistracija.Designer.cs">
       <DependentUpon>frmRegistracija.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,11 +286,17 @@
     <EmbeddedResource Include="Forms\Korisnici\frmKorisnici.resx">
       <DependentUpon>frmKorisnici.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Objekat\frmDetaljiObjekta.resx">
+      <DependentUpon>frmDetaljiObjekta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Objekat\frmNoviObjekat.resx">
       <DependentUpon>frmNoviObjekat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Objekat\frmObjekti.resx">
       <DependentUpon>frmObjekti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Objekat\frmSlikeObjekta.resx">
+      <DependentUpon>frmSlikeObjekta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Objekat\ObjektiPretraga.resx">
       <DependentUpon>ObjektiPretraga.cs</DependentUpon>

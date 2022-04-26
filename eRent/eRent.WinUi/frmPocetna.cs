@@ -142,6 +142,14 @@ namespace eRent.WinUi
             forma.Show();
         }
 
+        private void pretragaObjekataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObjektiPretraga forma = new ObjektiPretraga();
+            forma.MdiParent = this;
+            forma.Show();
+        }
+
+
         //private void dodajNoviObjekatToolStripMenuItem_Click(object sender, EventArgs e)
         //{
         //    frmNoviObjekat forma = new frmNoviObjekat();

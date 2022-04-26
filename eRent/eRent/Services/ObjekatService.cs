@@ -24,7 +24,6 @@ namespace eRent.Services
         [HttpGet]
         public List<Model.Model.Objekat> Get(ObjekatSearchRequest request)
         {
-            //var query = _context.Korisnik.AsQueryable();
             var query = _context.Set<Database.Objekat>()
                 .Include(x=>x.Kategorija)
                 .Include(x=>x.TipObjekta)
@@ -44,28 +43,11 @@ namespace eRent.Services
             {
                 query = query.Where(x => x.KategorijaId == request.KategorijaId);
             }
-            if (request.TipObjektaId.HasValue)
+            if (request.TipObjektaId.HasValue && request.TipObjektaId!=0)
             {
                 query = query.Where(x => x.TipObjektaId == request.TipObjektaId);
             }
-            if (!string.IsNullOrEmpty(request.Adresa))
-            {
-                query = query.Where(x => x.Adresa.StartsWith(request.Adresa));
-
-            }
-            if (!string.IsNullOrEmpty(request.Email))
-            {
-                query = query.Where(x => x.Email.StartsWith(request.Email));
-
-            }
-            //if ((request.Rezervisano==false))
-            //{
-            //    query = query.Where(x => x.Rezervisano==false);
-            //}
-            //if (request.GradId.HasValue)
-            //{
-            //    query = query.Where(x => x.GradId == request.GradId);
-            //}
+            
             var list = query.ToList();
             return _mapper.Map<List<Model.Model.Objekat>>(list);
         }
@@ -76,22 +58,6 @@ namespace eRent.Services
             var entitet = _context.Objekats.Find(id);
             return _mapper.Map<Model.Model.Objekat>(entitet);
         }
-        //public List<Model.Model.Objekat> GetNaziv(ObjekatNazivRequest request) 
-        //{
-        //    var query = _context.Objekats
-        //      .Include(x => x.Kategorija)
-        //      .Include(x => x.TipObjekta)
-        //      .Include(x => x.Vlasnik)
-        //      .AsQueryable();
-        //    if (!string.IsNullOrEmpty(request.Naziv))
-        //    {
-        //        query = query.Where(x => x.Naziv == request.Naziv);
-        //    }
-        //    var list = query.ToList();
-        //    return _mapper.Map<List<Model.Model.Objekat>>(list);
-        //}
-
-
         [HttpPost]
         public Model.Model.Objekat Insert(ObjekatInserRequest request)
         {
@@ -125,10 +91,15 @@ namespace eRent.Services
         public bool Delete(int id)
         {
             var entitet = _context.Objekats.Find(id);
-
             if (entitet != null)
             {
                 _context.Objekats.Remove(entitet);
+                var listkarte = _context.ObjekatSlikes.Where(x => x.ObjekatId == entitet.ObjekatId);
+                foreach (var x in listkarte)
+                {
+                    _context.ObjekatSlikes.Remove(x);
+                }
+
                 _context.SaveChanges();
                 return true;
             }

@@ -55,8 +55,8 @@ namespace eRent.WinUi.Forms.Rezervacija
             request.BrojMjestaDjeca =Convert.ToInt32(label4.Text);
             request.BrojMjestaOdrasli = Convert.ToInt32(label6.Text);
             request.DatumRezervacije = DateTime.Now;
-            request.DatumPrijave = dateTimePicker1.Value;
-            request.DatumOdjave = dateTimePicker2.Value;
+            request.DatumPrijave = dateTimePicker2.Value;
+            request.DatumOdjave = dateTimePicker3.Value;
             var d1 = "2022-02-02";
             var d2 = "2022-05-05";
             var d11 = DateTime.Parse(d1);
@@ -73,7 +73,7 @@ namespace eRent.WinUi.Forms.Rezervacija
             {
                 frmRezervacija1 forma = new frmRezervacija1
                 {
-                    Cjenovnik = x.Cjenovnik.Cijena.ToString(),
+                    //Cjenovnik = x.Cjenovnik.Cijena.ToString(),
                     Cijena = x.Cijena.ToString()
                 };
                 lista.Add(forma);
@@ -86,8 +86,10 @@ namespace eRent.WinUi.Forms.Rezervacija
             }
             request.GostId = 1;
             request.KorisnikId = 1;
+            request.Cijena = 100;
+            request.Vrijednost = 120;
             var listaRezervacija = await aPIService_Rezervacija.Get<List<Model.Model.Rezervacija>>(request);
-            var listaCjenovnik = await aPIService_Cjenovnik.Get<List<Model.Model.Cjenovnik>>(req);
+            //var listaCjenovnik = await aPIService_Cjenovnik.Get<List<Model.Model.Cjenovnik>>(req);
             if (listaRezervacija.Count >= 1)
             {
                 MessageBox.Show("Rezervacija je već unijeta u sistem, pokušajte ponovo sa novom rezervacijom.", "Greška", MessageBoxButtons.OK);

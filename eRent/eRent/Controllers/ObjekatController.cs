@@ -18,7 +18,7 @@ namespace eRent.Controllers
             _service = service;
         }
         [HttpGet]
-        public ActionResult<List<Model.Model.Objekat>> Get([FromQuery] ObjekatSearchRequest request)
+        public ActionResult<List<Model.Model.Objekat>> Get([FromQuery] ObjekatSearchRequest request=null)
         {
             return _service.Get(request);
         }

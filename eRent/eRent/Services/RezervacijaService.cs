@@ -26,12 +26,11 @@ namespace eRent.Services
         {
             //var query = _context.Korisnik.AsQueryable();
             var query = _context.Rezervacijas
-                .Include(x=>x.Cjenovnik)
                 .Include(x=>x.Objekat)
                 .Include(x=>x.Korisnik)
                 .AsQueryable();
-            
-          
+
+
             if (request.DatumPrijave != null && request.DatumOdjave != null)
             {
                 var datumOd = request.DatumPrijave?.Date;
@@ -44,11 +43,19 @@ namespace eRent.Services
             //    var datumDo = request.DatumOdjave?.Date;
             //    query = query.Where(x => x.Objekat.Naziv==request.ObjekatSearchRequest.Naziv);
             //}
+            if (request.ObjekatId.HasValue)
+            {
+                query = query.Where(x => x.ObjekatId == request.ObjekatId);
+            }
+            if (request.KorisnikId.HasValue)
+            {
+                query = query.Where(x => x.KorisnikId == request.KorisnikId);
+            }
             if (request.CjenovnikId.HasValue)
             {
                 query = query.Where(x => x.CjenovnikId == request.CjenovnikId);
             }
-            if (request.ObjekatSearchRequest.GradId.HasValue)
+            if (request.ObjekatSearchRequest!=null)
             {
                 query = query.Where(x => x.Objekat.GradId == request.ObjekatSearchRequest.GradId);
             }

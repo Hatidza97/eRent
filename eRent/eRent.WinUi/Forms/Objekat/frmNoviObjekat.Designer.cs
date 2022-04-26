@@ -45,6 +45,10 @@ namespace eRent.WinUi.Forms.Objekat
             this.label9 = new System.Windows.Forms.Label();
             this.cmbTip = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -176,7 +180,7 @@ namespace eRent.WinUi.Forms.Objekat
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(320, 376);
+            this.button1.Location = new System.Drawing.Point(69, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 35);
             this.button1.TabIndex = 19;
@@ -184,11 +188,47 @@ namespace eRent.WinUi.Forms.Objekat
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(295, 361);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(211, 35);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Dodaj slike";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 17);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Rezervisano:";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(116, 324);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(109, 21);
+            this.checkBox2.TabIndex = 22;
+            this.checkBox2.Text = "Rezervisano";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // frmNoviObjekat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbTip);
             this.Controls.Add(this.label9);
@@ -231,5 +271,9 @@ namespace eRent.WinUi.Forms.Objekat
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbTip;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

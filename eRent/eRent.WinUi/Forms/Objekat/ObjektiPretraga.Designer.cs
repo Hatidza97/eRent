@@ -34,12 +34,12 @@ namespace eRent.WinUi.Forms.Objekat
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTipObjekta = new System.Windows.Forms.ComboBox();
             this.dgvObjekti = new System.Windows.Forms.DataGridView();
+            this.btnTrazi = new System.Windows.Forms.Button();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipObjekta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategorija = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTrazi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjekti)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,17 @@ namespace eRent.WinUi.Forms.Objekat
             this.dgvObjekti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvObjekti.Size = new System.Drawing.Size(781, 266);
             this.dgvObjekti.TabIndex = 4;
+            this.dgvObjekti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObjekti_CellContentClick);
+            // 
+            // btnTrazi
+            // 
+            this.btnTrazi.Location = new System.Drawing.Point(326, 109);
+            this.btnTrazi.Name = "btnTrazi";
+            this.btnTrazi.Size = new System.Drawing.Size(102, 33);
+            this.btnTrazi.TabIndex = 5;
+            this.btnTrazi.Text = "Trazi";
+            this.btnTrazi.UseVisualStyleBackColor = true;
+            this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
             // 
             // Naziv
             // 
@@ -140,16 +151,6 @@ namespace eRent.WinUi.Forms.Objekat
             this.Telefon.Name = "Telefon";
             this.Telefon.ReadOnly = true;
             // 
-            // btnTrazi
-            // 
-            this.btnTrazi.Location = new System.Drawing.Point(326, 109);
-            this.btnTrazi.Name = "btnTrazi";
-            this.btnTrazi.Size = new System.Drawing.Size(102, 33);
-            this.btnTrazi.TabIndex = 5;
-            this.btnTrazi.Text = "Trazi";
-            this.btnTrazi.UseVisualStyleBackColor = true;
-            this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
-            // 
             // ObjektiPretraga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,11 +178,11 @@ namespace eRent.WinUi.Forms.Objekat
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTipObjekta;
         private System.Windows.Forms.DataGridView dgvObjekti;
+        private System.Windows.Forms.Button btnTrazi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipObjekta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kategorija;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.Button btnTrazi;
     }
 }

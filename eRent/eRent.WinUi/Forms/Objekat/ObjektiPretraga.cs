@@ -27,6 +27,13 @@ namespace eRent.WinUi.Forms.Objekat
         {
             await UcitajTipove();
             await UcitajKategorije();
+            dgvObjekti.AutoGenerateColumns = false;
+            LoadData();
+            
+        }
+
+        private async void LoadData()
+        {
             var podaci = await aPIService.Get<List<Model.Model.Objekat>>(null);
             List<frmObjekti1> lista = new List<frmObjekti1>();
             foreach (var item in podaci)
@@ -52,7 +59,7 @@ namespace eRent.WinUi.Forms.Objekat
             dgvObjekti.DataSource = lista;
         }
 
-       async Task UcitajKategorije()
+        async Task UcitajKategorije()
         {
             var result = await aPIServiceKategorija.Get<List<Model.Model.Kategorija>>(null);
             result.Insert(0, new Model.Model.Kategorija() { NazivKategorije = "---" });
@@ -77,12 +84,20 @@ namespace eRent.WinUi.Forms.Objekat
 
             var pretraga = new ObjekatSearchRequest
             {
-                KategorijaId = cmbKategorije.SelectedIndex,
+                KategorijaId= cmbKategorije.SelectedIndex,
                 TipObjektaId = cmbTipObjekta.SelectedIndex
             };
             var result2 = await aPIService.Get<List<Model.Model.Objekat>>(pretraga);
             dgvObjekti.DataSource = null;
             dgvObjekti.DataSource = result2;
+        }
+
+        private void dgvObjekti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var objekat = dgvObjekti.SelectedRows[0].Cells[0].Value;
+            var rez = objekat.ToString();
+            frmDetaljiObjekta forma = new frmDetaljiObjekta(int.Parse(rez));
+            forma.Show();
         }
     }
 }

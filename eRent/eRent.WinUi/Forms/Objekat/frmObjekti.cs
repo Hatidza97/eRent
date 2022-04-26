@@ -26,7 +26,7 @@ namespace eRent.WinUi.Forms.Objekat
         private async void frmObjekti_Load(object sender, EventArgs e)
         {
 
-            var podaci = await _apiService.Get<List<Model.Model.Objekat>>(null);
+            var podaci = await _apiService.Get<List<Model.Model.Objekat>>();
             List<frmObjekti1> lista = new List<frmObjekti1>();
             foreach (var item in podaci)
             {
