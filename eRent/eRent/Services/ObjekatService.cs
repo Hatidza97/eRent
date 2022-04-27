@@ -24,7 +24,7 @@ namespace eRent.Services
         [HttpGet]
         public List<Model.Model.Objekat> Get(ObjekatSearchRequest request)
         {
-            var query = _context.Set<Database.Objekat>()
+            var query = _context.Objekats
                 .Include(x=>x.Kategorija)
                 .Include(x=>x.TipObjekta)
                 .Include(x=>x.Vlasnik)

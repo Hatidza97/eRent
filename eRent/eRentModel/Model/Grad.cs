@@ -6,10 +6,10 @@ namespace eRent.Model.Model
 {
     public partial class Grad
     {
-        public Grad()
-        {
-            //Korisniks = new HashSet<Korisnik>();
-        }
+    //    public Grad()
+    //    {
+    //        //Korisniks = new HashSet<Korisnik>();
+    //    }
 
         public int GradId { get; set; }
         public string Naziv { get; set; }

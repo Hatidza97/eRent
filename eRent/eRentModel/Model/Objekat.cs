@@ -6,12 +6,12 @@ namespace eRent.Model.Model
 {
     public partial class Objekat
     {
-        public Objekat()
-        {
-            //Cjenovniks = new HashSet<Cjenovnik>();
-            //ObjekatSlikes = new HashSet<ObjekatSlike>();
-            //Rezervacijas = new HashSet<Rezervacija>();
-        }
+        //public Objekat()
+        //{
+        //    Cjenovniks = new HashSet<Cjenovnik>();
+        //    ObjekatSlikes = new HashSet<ObjekatSlike>();
+        //    Rezervacijas = new HashSet<Rezervacija>();
+        //}
 
         public int ObjekatId { get; set; }
         public string Naziv { get; set; }

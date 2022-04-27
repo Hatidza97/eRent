@@ -81,12 +81,16 @@ namespace eRent.WinUi.Forms.Objekat
 
         private async void btnTrazi_Click(object sender, EventArgs e)
         {
-
+            if (cmbKategorije.SelectedIndex == 0 && cmbTipObjekta.SelectedIndex==0)
+            {
+                LoadData();
+            }
             var pretraga = new ObjekatSearchRequest
             {
                 KategorijaId= cmbKategorije.SelectedIndex,
                 TipObjektaId = cmbTipObjekta.SelectedIndex
             };
+            
             var result2 = await aPIService.Get<List<Model.Model.Objekat>>(pretraga);
             dgvObjekti.DataSource = null;
             dgvObjekti.DataSource = result2;

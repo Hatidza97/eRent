@@ -13,7 +13,7 @@ namespace eRent.Controllers
     public class ObjekatController
     {
         private readonly IObjekatService _service;
-    public ObjekatController(IObjekatService service)
+        public ObjekatController(IObjekatService service)
         {
             _service = service;
         }

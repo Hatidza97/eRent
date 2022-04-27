@@ -111,6 +111,7 @@ namespace eRent.WinUi.Forms.Objekat
             this.Controls.Add(this.label1);
             this.Name = "frmSlikeObjekta";
             this.Text = "frmSlikeObjekta";
+            this.Load += new System.EventHandler(this.frmSlikeObjekta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

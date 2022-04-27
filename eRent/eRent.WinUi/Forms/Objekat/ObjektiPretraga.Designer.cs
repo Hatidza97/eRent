@@ -126,6 +126,7 @@ namespace eRent.WinUi.Forms.Objekat
             this.TipObjekta.MinimumWidth = 6;
             this.TipObjekta.Name = "TipObjekta";
             this.TipObjekta.ReadOnly = true;
+            this.TipObjekta.Visible = false;
             // 
             // Kategorija
             // 
@@ -134,6 +135,7 @@ namespace eRent.WinUi.Forms.Objekat
             this.Kategorija.MinimumWidth = 6;
             this.Kategorija.Name = "Kategorija";
             this.Kategorija.ReadOnly = true;
+            this.Kategorija.Visible = false;
             // 
             // Adresa
             // 

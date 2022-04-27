@@ -6,10 +6,10 @@ namespace eRent.Model.Model
 {
     public partial class TipObjektum
     {
-        public TipObjektum()
-        {
-            Objekats = new HashSet<Objekat>();
-        }
+    //    public TipObjektum()
+    //    {
+    //        Objekats = new HashSet<Objekat>();
+    //    }
 
         public int TipObjektaId { get; set; }
         public string Tip { get; set; }

@@ -6,13 +6,13 @@ namespace eRent.Model.Model
 {
     public partial class Korisnik
     {
-        public Korisnik()
-        {
-            //    Autorizacijas = new HashSet<Autorizacija>();
-            //    Objekats = new HashSet<Objekat>();
-            //    RezervacijaGosts = new HashSet<Rezervacija>();
-            //    RezervacijaKorisniks = new HashSet<Rezervacija>();
-        }
+        //public Korisnik()
+        //{
+        //    Autorizacijas = new HashSet<Autorizacija>();
+        //    Objekats = new HashSet<Objekat>();
+        //    RezervacijaGosts = new HashSet<Rezervacija>();
+        //    RezervacijaKorisniks = new HashSet<Rezervacija>();
+        //}
 
         public int KorisnikId { get; set; }
         public string Username { get; set; }

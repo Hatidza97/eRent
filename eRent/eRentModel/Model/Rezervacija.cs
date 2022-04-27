@@ -6,10 +6,10 @@ namespace eRent.Model.Model
 {
     public partial class Rezervacija
     {
-        public Rezervacija()
-        {
-            //Boravaks = new HashSet<Boravak>();
-        }
+        //public Rezervacija()
+        //{
+        //    //Boravaks = new HashSet<Boravak>();
+        //}
 
         public int RezervacijaId { get; set; }
         public int ObjekatId { get; set; }

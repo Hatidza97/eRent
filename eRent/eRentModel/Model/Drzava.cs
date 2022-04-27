@@ -6,10 +6,10 @@ namespace eRent.Model.Model
 {
     public partial class Drzava
     {
-        public Drzava()
-        {
-         //   Grads = new HashSet<Grad>();
-        }
+        //public Drzava()
+        //{
+        // //   Grads = new HashSet<Grad>();
+        //}
 
         public int DrzavaId { get; set; }
         public string Naziv { get; set; }

@@ -72,5 +72,10 @@ namespace eRent.WinUi.Forms.Objekat
              MessageBox.Show("Slika je dodana u bazu", "Poruka", MessageBoxButtons.OK);
              this.Close();
         }
+
+        private void frmSlikeObjekta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
