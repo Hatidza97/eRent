@@ -36,15 +36,13 @@ namespace eRent.WinUi
             this.prikazKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.prikazObjekataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pretragaObjekataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledRezervacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pretragaObjekataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -56,8 +54,7 @@ namespace eRent.WinUi
             this.fileMenu,
             this.editMenu,
             this.toolsMenu,
-            this.windowsMenu,
-            this.helpMenu});
+            this.windowsMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -99,9 +96,16 @@ namespace eRent.WinUi
             // prikazObjekataToolStripMenuItem
             // 
             this.prikazObjekataToolStripMenuItem.Name = "prikazObjekataToolStripMenuItem";
-            this.prikazObjekataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.prikazObjekataToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.prikazObjekataToolStripMenuItem.Text = "Prikaz objekata";
             this.prikazObjekataToolStripMenuItem.Click += new System.EventHandler(this.prikazObjekataToolStripMenuItem_Click);
+            // 
+            // pretragaObjekataToolStripMenuItem
+            // 
+            this.pretragaObjekataToolStripMenuItem.Name = "pretragaObjekataToolStripMenuItem";
+            this.pretragaObjekataToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.pretragaObjekataToolStripMenuItem.Text = "Pretraga objekata";
+            this.pretragaObjekataToolStripMenuItem.Click += new System.EventHandler(this.pretragaObjekataToolStripMenuItem_Click);
             // 
             // windowsMenu
             // 
@@ -126,19 +130,6 @@ namespace eRent.WinUi
             this.kreirajRezervacijuToolStripMenuItem.Text = "Kreiraj rezervaciju";
             this.kreirajRezervacijuToolStripMenuItem.Click += new System.EventHandler(this.kreirajRezervacijuToolStripMenuItem_Click);
             // 
-            // helpMenu
-            // 
-            this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator8});
-            this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(75, 24);
-            this.helpMenu.Text = "O nama";
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(71, 6);
-            // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -156,13 +147,6 @@ namespace eRent.WinUi
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
             this.toolStripStatusLabel.Text = "Status";
-            // 
-            // pretragaObjekataToolStripMenuItem
-            // 
-            this.pretragaObjekataToolStripMenuItem.Name = "pretragaObjekataToolStripMenuItem";
-            this.pretragaObjekataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.pretragaObjekataToolStripMenuItem.Text = "Pretraga objekata";
-            this.pretragaObjekataToolStripMenuItem.Click += new System.EventHandler(this.pretragaObjekataToolStripMenuItem_Click);
             // 
             // frmPocetna
             // 
@@ -190,10 +174,8 @@ namespace eRent.WinUi
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
-        private System.Windows.Forms.ToolStripMenuItem helpMenu;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem editMenu;
         private System.Windows.Forms.ToolStripMenuItem toolsMenu;

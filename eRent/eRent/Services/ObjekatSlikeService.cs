@@ -22,7 +22,7 @@ namespace eRent.Services
         }
 
         [HttpGet]
-        public List<Model.Model.ObjekatSlike> Get(ObjekatSlikeSearchRequest request = null)
+        public List<Model.Model.ObjekatSlike> Get(ObjekatSlikeSearchRequest request )
         {
             var query = _context.ObjekatSlikes
                 .Include(x => x.Objekat)

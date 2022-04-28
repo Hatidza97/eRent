@@ -8,6 +8,6 @@ namespace eRent.Model.Request.ObjekatSlike
     {
         public int? ObjekatSlikeId { get; set; }
         public int? ObjekatId { get; set; }
-        public byte?[] ObjekatSlike1 { get; set; }
+        public byte[] ObjekatSlike1 { get; set; }
     }
 }

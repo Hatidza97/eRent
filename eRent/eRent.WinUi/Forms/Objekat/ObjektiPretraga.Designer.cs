@@ -35,6 +35,7 @@ namespace eRent.WinUi.Forms.Objekat
             this.cmbTipObjekta = new System.Windows.Forms.ComboBox();
             this.dgvObjekti = new System.Windows.Forms.DataGridView();
             this.btnTrazi = new System.Windows.Forms.Button();
+            this.ObjekatId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipObjekta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kategorija = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +87,7 @@ namespace eRent.WinUi.Forms.Objekat
             this.dgvObjekti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvObjekti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvObjekti.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ObjekatId,
             this.Naziv,
             this.TipObjekta,
             this.Kategorija,
@@ -110,6 +112,15 @@ namespace eRent.WinUi.Forms.Objekat
             this.btnTrazi.Text = "Trazi";
             this.btnTrazi.UseVisualStyleBackColor = true;
             this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
+            // 
+            // ObjekatId
+            // 
+            this.ObjekatId.DataPropertyName = "ObjekatId";
+            this.ObjekatId.HeaderText = "ObjekatId";
+            this.ObjekatId.MinimumWidth = 6;
+            this.ObjekatId.Name = "ObjekatId";
+            this.ObjekatId.ReadOnly = true;
+            this.ObjekatId.Visible = false;
             // 
             // Naziv
             // 
@@ -181,6 +192,7 @@ namespace eRent.WinUi.Forms.Objekat
         private System.Windows.Forms.ComboBox cmbTipObjekta;
         private System.Windows.Forms.DataGridView dgvObjekti;
         private System.Windows.Forms.Button btnTrazi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ObjekatId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipObjekta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kategorija;
