@@ -113,18 +113,18 @@ namespace eRent.WinUi
             {
                 MessageBox.Show("Nemate pravo pristupa.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
+            //else
+            //{
+            //    var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
-                var stringBuilder = new StringBuilder();
-                foreach (var error in errors)
-                {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
-                }
+            //    var stringBuilder = new StringBuilder();
+            //    foreach (var error in errors)
+            //    {
+            //        stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+            //    }
 
-                MessageBox.Show(stringBuilder.ToString(), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    MessageBox.Show(stringBuilder.ToString(), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             return default;
         }

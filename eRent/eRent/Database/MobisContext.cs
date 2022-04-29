@@ -1,4 +1,5 @@
 ﻿using System;
+using eRent.Seeder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -307,6 +308,7 @@ namespace eRent.Database
             });
 
             OnModelCreatingPartial(modelBuilder);
+            modelBuilder.Seed();
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

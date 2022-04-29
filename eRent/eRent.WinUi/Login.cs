@@ -71,6 +71,7 @@ namespace eRent.WinUi
                 
                 if (result is null || result.Count == 0)
                 {
+                    MessageBox.Show("Neispravno korisničko ime ili lozinka! ", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
